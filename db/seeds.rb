@@ -10,9 +10,10 @@
 require 'csv'
 
 
-## CREATE DB OF CRYPTOPUNKS
+# CREATE DB OF CRYPTOPUNKS
 # csv_text = File.read('/Users/alexpaul/code/abpaul87/wikipunks-v1/storage/0-9999.csv')
 # csv = CSV.parse(csv_text, :headers => true)
+# puts "loaded csv..."
 
 # csv.each do |punk|
 #   Cryptopunk.exists?(id: punk['id'].strip) ? Cryptopunk.find(punk['id'].strip).delete : nil
@@ -27,7 +28,7 @@ require 'csv'
 # end
 
 
-###CREATE LIST OF TRAITS
+##CREATE LIST OF TRAITS
 # Cryptopunk.all.each do |punk|
 #   if punk.accessories.nil?
 #     nil

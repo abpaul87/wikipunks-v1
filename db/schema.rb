@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2021_12_23_121725) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "biohistories", force: :cascade do |t|
     t.string "name"
     t.string "story"
-    t.integer "bio_id", null: false
+    t.bigint "bio_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bio_id"], name: "index_biohistories_on_bio_id"
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_12_23_121725) do
   create_table "bios", force: :cascade do |t|
     t.string "name"
     t.string "story"
-    t.integer "cryptopunk_id", null: false
+    t.bigint "cryptopunk_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cryptopunk_id"], name: "index_bios_on_cryptopunk_id"
@@ -41,8 +44,8 @@ ActiveRecord::Schema.define(version: 2021_12_23_121725) do
   end
 
   create_table "punktraits", force: :cascade do |t|
-    t.integer "cryptopunk_id", null: false
-    t.integer "trait_id", null: false
+    t.bigint "cryptopunk_id", null: false
+    t.bigint "trait_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cryptopunk_id"], name: "index_punktraits_on_cryptopunk_id"
