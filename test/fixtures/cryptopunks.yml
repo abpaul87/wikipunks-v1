@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  punktype: MyString
+  gender: MyString
+  skintone: MyString
+  traitcount: 1
+  accessories: MyString
+
+two:
+  punktype: MyString
+  gender: MyString
+  skintone: MyString
+  traitcount: 1
+  accessories: MyString

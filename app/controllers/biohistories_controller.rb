@@ -1,0 +1,2 @@
+class BiohistoriesController < ApplicationController
+end
